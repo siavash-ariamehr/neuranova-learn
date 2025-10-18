@@ -25,6 +25,8 @@ httpx = "^0.28.1"
 locust = "^2.41.5"
 transformers = "^4.57.0"
 bcrypt = "^4.0.1"
+torch = "^2.5.0"
+sentencepiece = "^0.2.0"
 
 
 [build-system]

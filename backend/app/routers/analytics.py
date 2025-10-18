@@ -72,3 +72,37 @@ async def generate_learning_path(user: User, progress_records: list, db: Session
     ).limit(10).all()
     
     return [{"id": l.id, "title": l.title, "subject": l.subject.value, "difficulty": l.difficulty.value} for l in next_lessons]
+
+@router.get("/teacher/students")
+async def get_teacher_students(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    if current_user.role.value != "teacher":
+        raise HTTPException(status_code=403, detail="Only teachers can access this endpoint")
+    
+    return {"students": [], "message": "Teacher-student relationships to be implemented"}
+
+@router.get("/parent/children")
+async def get_parent_children(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    if current_user.role.value != "parent":
+        raise HTTPException(status_code=403, detail="Only parents can access this endpoint")
+    
+    return {"children": [], "message": "Parent-child relationships to be implemented"}
+
+@router.get("/esg-report/{user_id}")
+async def generate_esg_report(
+    user_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    return {
+        "user_id": user_id,
+        "educational_score": 85,
+        "social_engagement": 90,
+        "governance_compliance": 95,
+        "message": "Full Moodle LMS integration pending"
+    }

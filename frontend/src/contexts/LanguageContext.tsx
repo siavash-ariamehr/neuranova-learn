@@ -30,7 +30,10 @@ const languageNames: { [key: string]: string } = {
   nl: 'Dutch',
   sv: 'Swedish',
   fi: 'Finnish',
-  no: 'Norwegian'
+  no: 'Norwegian',
+  hu: 'Hungarian',
+  bg: 'Bulgarian',
+  el: 'Greek'
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

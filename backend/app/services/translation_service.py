@@ -7,7 +7,8 @@ class TranslationService:
     def __init__(self):
         self.supported_languages = [
             "en", "zh", "es", "hi", "ar", "fr", "bn", "pt", "ru", "ur",
-            "id", "de", "ja", "tr", "fa", "it", "pl", "nl", "sv", "fi", "no"
+            "id", "de", "ja", "tr", "fa", "it", "pl", "nl", "sv", "fi", "no",
+            "hu", "bg", "el"
         ]
         self.model_name = "facebook/m2m100_418M"
         self.model = None
