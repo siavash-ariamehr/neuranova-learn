@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "NeuraNova Learn",
+    "slug": "neuranova-learn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.neuranova.learn",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera for AR/VR educational experiences.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone for voice input and real-time collaboration.",
+        "NSPhotoLibraryUsageDescription": "This app accesses your photo library to save educational content."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.neuranova.learn",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
